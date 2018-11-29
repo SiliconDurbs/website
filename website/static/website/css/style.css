@@ -1,0 +1,100 @@
+html{
+
+}
+
+body{
+}
+
+.body_width{
+	width:80%;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.header_image_stadium{
+	position: absolute;
+    z-index: -1;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.header_image_city{
+	position: absolute;
+    z-index: -1;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.header_text{
+	width:50%;
+	padding:10px;
+	background-color:rgba(255, 255, 255, .9);
+	border-radius:5%;
+}
+
+.header_text h1{
+	color:red;
+}
+
+.header_text p{
+	font-weight:bold;
+}
+
+.up_image{
+	width:220px;
+	height:220px;
+}
+
+.down_image{
+	width:150px;
+	height:150px;
+	position:relative;
+	top:10px;
+	padding-bottom:20px;
+	text-align:center;
+}
+
+.footer img{
+	width:100%;
+}
+
+.footer h4{
+	color:orange;
+}
+
+.footer a{
+	color:grey;
+}
+
+// Extra small devices (portrait phones, less than 577px)
+// No media query for `xs` since this is the default in Bootstrap
+
+// Small devices (landscape phones, 577px and up)
+@media (min-width: 577px) { 
+
+.down_image{
+	top:50px;
+}
+
+}
+
+// Medium devices (tablets, 769px and up)
+@media (min-width: 769px) { 
+.down_image{
+	top:50px;
+}
+}
+
+// Large devices (desktops, 993px and up)
+@media (min-width: 992px) { 
+.down_image{
+	top:50px;
+}
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { 
+}
+

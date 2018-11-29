@@ -1,0 +1,145 @@
+{% extends 'website/base.html' %}
+{% load static %}
+
+{% block title %} Home {% endblock %}
+
+{% block body %}
+
+<div class="container">
+
+	<br />
+	<div class="row justify-content-md-center">
+		<div class="col">
+			<div class="header_text animated bounceInLeft delay-2s">
+				<h1> We Are Silicon Durban </h1>
+				<p> 
+				We organize entrepreneurs from various backgrounds and we 
+				create an environment where they can network and benefit 
+				from each other.
+				</p>
+				<button type="button" class="btn btn-success">
+					Sign Up For A News Letter</button>
+			</div>
+			<img src='{% static 'website/images/durban_city.png' %}' 
+			  class="header_image_city animated fadeInDownBig delay-1s"  />
+			<img src='{% static 'website/images/durban_stadium.png' %}' 
+     class="header_image_stadium animated fadeInDownBig"  />
+		</div>
+	</div>
+	<br />
+	<br />
+	<br />
+	<br />
+
+	<div class="body_width">
+		<!-- VISION -->
+		<div class="row">
+			<div class="col">
+				<h2> Our Vision </h2>
+				<p class="text-justify">
+				Is to create a fully functional tech value chain 
+				ecosystem in the Durbs that
+				will create a viable economic impact 
+				in Durbs and kzn by 2022 and be
+				recognized as one of highly sophisticated and best tech 
+				ecosystems in Africa by 2025
+				</p>
+			</div>
+			<div class="col">
+				<img 
+	src='{% static 'website/images/discussion.png' %}' 
+	class="up_image"   />
+				<img 
+ src='{% static 'website/images/group.png' %}' 
+ class="down_image"  />
+			</div>
+		</div>
+
+
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<!-- MISSION -->
+		<div class="row">
+			<div class="col">
+				<img 
+	src='{% static 'website/images/goal.png' %}' 
+	class="up_image"   />
+				<img 
+ src='{% static 'website/images/paper-plane.png' %}' 
+ class="down_image"  />
+			</div>
+			<div class="col">
+				<h2> Our Mission</h2>
+				<p class="text-justify">
+				Is transforming the culture of tech innovation in the Durbs into start-up culture that is contagious  with the belief that this one way of contributing to and improving our economy, solving real-world problems, improve organizations and society through the power of crowds and collaboration to co-create, design and innovate a better  tomorrow for the Durbs
+				</p>
+			</div>
+		</div>
+
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<!-- OUR STORY -->
+		<div class="row">
+			<div class="col">
+				<h2 class="text-justify"> Our Story</h2>
+				<p class="text-justify">
+				It is evident that the fusion of technology is blurring the lines between the physical, digital, and biological spheres as we embrace the 4th Industrial Revolution. 
+				<br />
+				<br />
+				The intrinsic power of Crowds together
+				with Collaboration and Co-Creation is key for today, and fundamental for tomorrow, thus Silicon Durbs was born. We have learned that if given the resources to connect and collaborate  their combined power is much greater than the sum of its parts. 
+				<br />
+				<br />
+				The problem that we are addressing relative to start-ups in Durbs is we lack a voice, lack collaboration with each other and industry, lack knowledge of social, economic and industry trends and have limited or no access to investors. On the flip side investors are finding
+				it a challenge to find promising startups
+				</p>
+			</div>
+		</div>
+
+
+	</div>
+</div>
+</div>
+
+<script>
+	function onViewport(el, elClass, offset, callback) {
+		/*** Based on http://ejohn.org/blog/learning-from-twitter/ ***/
+		var didScroll = false;
+		var this_top;
+		var height;
+		var top;
+
+		if(!offset) { var offset = 0; }
+
+		$(window).scroll(function() {
+			didScroll = true;
+		});
+
+		setInterval(function() {
+			if (didScroll) {
+				didScroll = false;
+				top = $(this).scrollTop();
+
+				$(el).each(function(i){
+					this_top = $(this).offset().top - offset;
+					height   = $(this).height();
+
+					// Scrolled within current section
+					if (top >= this_top && !$(this).hasClass(elClass)) {
+						$(this).addClass(elClass);
+
+						if (typeof callback == "function") callback(el);
+					}
+				});
+			}
+		}, 100);
+	}
+</script>
+{% endblock %}
+
