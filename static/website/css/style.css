@@ -42,13 +42,6 @@ body{
 	font-weight:bold;
 }
 
-.page_header{
-	background-color:orange;
-	padding:5px;
-	color:white;
-	width:15%;
-}
-
 .up_image{
 	width:220px;
 	height:220px;
@@ -75,22 +68,6 @@ body{
 	color:grey;
 }
 
-.founder_card {
-	 text-align:center;
-	 -moz-box-shadow: 5px 5px 5px #888;
--webkit-box-shadow: 5px 5px 5px #888;
-box-shadow: 5px 5px 5px silver;
-}
-
-.founder_card:hover{
-box-shadow: 5px 5px 5px orange;
-}
-
-.founder_card img {
-	width:70px;
-	height:70px;
-}
-
 // Extra small devices (portrait phones, less than 577px)
 // No media query for `xs` since this is the default in Bootstrap
 
@@ -103,25 +80,21 @@ box-shadow: 5px 5px 5px orange;
 
 }
 
+// Medium devices (tablets, 769px and up)
 @media (min-width: 769px) { 
 .down_image{
 	top:50px;
 }
-
-form{
-	width:40%;
 }
 
-body{
-}
-}
-
+// Large devices (desktops, 993px and up)
 @media (min-width: 992px) { 
 .down_image{
 	top:50px;
 }
 }
 
+// Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) { 
 }
 

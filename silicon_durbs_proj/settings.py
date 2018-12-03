@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = not os.environ.get('IS_PROD')
+DEBUG = os.environ.get('IS_PROD') == 'False' 
 
 ALLOWED_HOSTS = ['127.0.0.1']
 
@@ -37,7 +37,8 @@ INSTALLED_APPS = [
         'django.contrib.sessions',
         'django.contrib.messages',
         'django.contrib.staticfiles',
-        'website'
+        'website',
+        'django_registration'
         ]
 
 MIDDLEWARE = [
@@ -116,6 +117,10 @@ USE_L10N = True
 
 USE_TZ = True
 
+#DJANGO REGISTRATION
+ACCOUNT_ACTIVATION_DAYS = 7 # One-week activation window
+
+REGISTRATION_OPEN = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
