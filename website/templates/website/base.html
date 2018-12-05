@@ -58,7 +58,9 @@
 			<!-- MENU -->
 			<div class="row">
 				<div class="col">
+					<a href="{% url 'index' %}">
 					<img src='{% static 'website/images/logo.png' %}' id="logo" width=300 height=114 />
+					</a>
 				</div>
 				<div class="col col-lg">
 					<div id="menu">
@@ -98,6 +100,16 @@
 					<!-- BODY -->
 					<div style="padding-bottom:40px">
 					</div>
+					{% if no_heading == 'True' %}
+					<h2 class="page_header"><i class="fa fa-chevron-right"></i>{% block page_header %}{% endblock %}</h2>
+					{% endif %}
+					<br />
+					{% if message %}
+					<p style="display:flex;align-items:center;font-size:20px;border:1px solid silver;padding:5px;border-radius:10px;">
+					<i class="fa fa-info-circle" style="font-size:30px;padding-right:5px;color:orange"></i>
+					 {{message}}
+					</p>
+					{% endif %}
 					{% block body %}
 					{% endblock %}
 					<!-- END BODY-->
